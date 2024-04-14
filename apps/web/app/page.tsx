@@ -7,7 +7,6 @@ import {
 import React from 'react'
 
 const page = () => {
-  console.log('page')
   return (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
