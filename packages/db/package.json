@@ -1,0 +1,13 @@
+{
+  "name": "@secret-hub/db",
+  "packageManager": "yarn@3.2.1",
+  "exports": {
+    "./client": "./src/index.ts"
+  },
+  "dependencies": {
+    "prisma": "^5.12.1"
+  },
+  "devDependencies": {
+    "@prisma/client": "^5.12.1"
+  }
+}
