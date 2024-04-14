@@ -8,4 +8,7 @@ module.exports = {
         tsconfigRootDir: __dirname,
     },
     ignorePatterns: ['node_modules/', 'dist/', '**/*.d.ts', '*.config.js'],
+    rules: {
+        'no-redeclare': 'off',
+    },
 }
