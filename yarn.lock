@@ -2486,6 +2486,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"docs@workspace:apps/docs":
+  version: 0.0.0-use.local
+  resolution: "docs@workspace:apps/docs"
+  dependencies:
+    "@secret-hub/eslint-config": "*"
+    "@secret-hub/typescript-config": "*"
+    "@secret-hub/ui": "workspace:*"
+  languageName: unknown
+  linkType: soft
+
 "doctrine@npm:^2.1.0":
   version: 2.1.0
   resolution: "doctrine@npm:2.1.0"
