@@ -4,6 +4,10 @@
   "exports": {
     "./client": "./src/index.ts"
   },
+  "scripts": {
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push --skip-generate"
+  },
   "dependencies": {
     "prisma": "^5.12.1"
   },

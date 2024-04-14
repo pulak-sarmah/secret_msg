@@ -1,16 +1,24 @@
 import { NextResponse } from 'next/server'
-import { PrismaClient } from '@secret-hub/db/client'
-
-const client = new PrismaClient()
+import prisma from '../../utils/prismaClient'
 
 export const GET = async () => {
-  await client.user.create({
-    data: {
-      email: 'asd',
-      name: 'adsads',
-    },
-  })
-  return NextResponse.json({
-    message: 'hi there',
-  })
+  try {
+    await prisma.user.create({
+      data: {
+        email: 'asdaasss',
+        name: 'adsads',
+      },
+    })
+    return NextResponse.json({
+      message: 'hi there',
+    })
+  } catch (error) {
+    return NextResponse.json(
+      {
+        status: 500,
+        body: 'error',
+      },
+      { status: 400 }
+    )
+  }
 }
