@@ -22,6 +22,7 @@ model User {
   verifyCodeExpiry    DateTime
   isVerified          Boolean   @default(false)
   isAcceptingMessages Boolean   @default(true)
+  createdAt           DateTime  @default(now())
   messages            Message[]
 }
 
