@@ -64,7 +64,6 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// eslint-disable-next-line no-unused-vars
 export async function GET(request: NextRequest) {
   const session = await getServerSession(authOptions)
 

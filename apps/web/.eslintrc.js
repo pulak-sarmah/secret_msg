@@ -8,6 +8,7 @@ module.exports = {
   },
   rules: {
     'no-console': 'error',
+    'no-unused-vars': 'off',
   },
   ignorePatterns: ['node_modules/', 'dist/', '**/*.d.ts', '*.config.js'],
 }
