@@ -2,6 +2,7 @@ import '@secret-hub/ui/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import AuthProvider from '../context/AuthProvider'
+import { Toaster } from '@secret-hub/ui/components/toaster'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <AuthProvider>
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          {children}
+          <Toaster />
+        </body>
       </AuthProvider>
     </html>
   )
