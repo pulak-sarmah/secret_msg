@@ -1,12 +1,11 @@
 'use client'
-import { useSession, signIn, signOut } from 'next-auth/react'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 import * as z from 'zod'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { useDebounceCallback } from 'usehooks-ts'
-import { toast, useToast } from '@secret-hub/ui/hooks/use-toast'
+import { useToast } from '@secret-hub/ui/hooks/use-toast'
 import { useRouter } from 'next/navigation'
 import { signUpSchema } from '../../schemas/signUpSchema'
 import axios, { AxiosError } from 'axios'
@@ -159,7 +158,7 @@ export default function SignInPage() {
                 </FormItem>
               )}
             />
-            <Button type="submit" disabled={isSubmitting}>
+            <Button type="submit" variant={'default'} disabled={isSubmitting}>
               {isSubmitting ? 'Please Wait' : 'Sign up'}
             </Button>
           </form>
